@@ -1,11 +1,8 @@
 spring:
   datasource:
-    url: jdbc:postgresql://mydb-inclass.cmpzxiqqdpxe.us-east-2.rds.amazonaws.com:5432/dbhello
-    username: emily_vong
-    password: mydb2018
-#    url: jdbc:postgresql://sparknov27.cpijza42wykv.us-east-2.rds.amazonaws.com:5432/inclass
-#    username: grant_beidel
-#    password: password123
+    url: 
+    username: 
+    password: 
     driver-class-name: org.postgresql.Driver
 
   jpa:
