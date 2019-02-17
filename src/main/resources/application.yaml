@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://mydb-inclass.cmpzxiqqdpxe.us-east-2.rds.amazonaws.com:5432/dbhello
+    username: emily_vong
+    password: mydb2018
+#    url: jdbc:postgresql://sparknov27.cpijza42wykv.us-east-2.rds.amazonaws.com:5432/inclass
+#    username: grant_beidel
+#    password: password123
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQL9Dialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        jdbc:
+         lob:
+          non_contextual_creation: true
+
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+<div class="container" style="text-align:center">
+  <br>
+  <img width="300" src='..\assets\img\logo.jpg'>
+  <br>
+  <br>
+  <div class="text-white">
+    <div class="row mt-1 mt-md-1">
+      <div class="col-md-5 col-lg-5 col-xl-5 mx-auto">
+        <div class="card bg-dark img text-white">
+            <br>
+          <h4>
+            <p class="font-weight-bolder text-monospace">Life's a journey, <br> stay on track...</p>
+          </h4>
+          <br>
+          <br>
+            <div class="form-container">
+              <form #loginForm = "ngForm" novalidate (ngSubmit)="loginSubmit()">
+                <div class="form-group">
+                  <label for="username">Email address</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="username"
+                    placeholder="Enter email"
+                    [(ngModel)]="email"
+                    required/>
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    placeholder="Enter Password"
+                    [(ngModel)]="password"
+                    required/>
+                </div>
+
+                <div>
+                    <input class="btn btn-primary btn-info" [disabled]="!loginForm.valid" type="submit" value="Sign In">
+                <!--  <button type="submit" class="btn btn-primary"  [disabled]="!loginForm.valid"><h4>Login</h4></button> -->
+                </div>
+              </form>
+             <br> <button [routerLink]="['/new-user']" class="btn btn-primary btn-info" type="submit">Sign Up</button>
+             <!-- <button type="button" [routerLink]="['/new-user']" class="badge badge-pill badge-info m-2"><h4>Sign Up</h4></button> -->
+            </div>
+            <!-- <h4><a [routerLink]="['/new-user']" class="badge badge-pill badge-info" rel="noopener">Sign Up</a></h4> -->
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

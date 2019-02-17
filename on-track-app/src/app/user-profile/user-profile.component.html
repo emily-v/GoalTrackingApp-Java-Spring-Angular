@@ -1,0 +1,47 @@
+<div class="container" style="text-align:center">
+  <br>
+  <br>
+    <h3>{{ firstName }}! You Are</h3><img width="300" src='..\assets\img\logo.jpg'>
+  <br>
+  <br>
+        <div class="row mt-1 mt-md-1">
+            <div class="col-md-5 col-lg-5 col-xl-5 mx-auto">
+                <app-header></app-header>
+                    <div class="card bg-dark img text-white">
+                      <br>
+                    <h4>
+                      <p class="font-weight-bolder text-monospace">Life's a journey, <br> stay on track...</p>
+                    </h4>
+                      <br>
+              
+                      <!-- <ul class="list-group">
+                        <li class="list-group-item list-group-item-info">Recent Goals</li>
+                        <li class="list-group-item text-info">Goal Title</li>  
+                      </ul> -->
+                
+                      <br>
+                    <a href="https://calendar.google.com/"  target="blank" class="text-white">   
+                       <button type="button" class="btn btn-info btn-lg btn-block">Calendar</button>
+                      <br>
+
+                    </a>
+                <div class="card-deck">
+                    <div class="card bg-info">
+                        <a [routerLink]="['/new-goal']" class="text-white bg-info">     
+                        <div class="card-header">New Goal</div>
+                        <img src="../assets/img/pen.jpg" class="card-img-top" alt="...">
+                    </a> 
+                </div>
+                <div class="card bg-info">
+                    <a (click)="routeToAllGoals()" class="text-white">   
+                        <div class="card-header">All Goals</div>
+                        <img src="../assets/img/check.jpg" class="card-img-top" alt="..." >
+                        </a>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>
+
+

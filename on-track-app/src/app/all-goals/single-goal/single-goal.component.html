@@ -1,0 +1,38 @@
+<div class="container" style="text-align:center">
+  <br>
+  <br>
+    <h3>{{ firstName }}! You Are</h3><img width="300" src='..\assets\img\logo.jpg'>
+  <br>
+  <br>
+    <div class="text-white">
+        <div class="row mt-1 mt-md-1">
+            <div class="col-md-5 col-lg-5 col-xl-5 mx-auto">
+                <app-header></app-header>
+                <div class="card bg-dark img text-white"><br><br>
+                  <h5>{{ goal.title }}</h5>
+                  <h5> Target: {{ goal.target }} {{ goal.unit }} per day</h5><br>
+                  <!-- <p>{{ goal.date | date : 'dd/MM/yy ' }}</p><br> -->
+                  <p>{{ showTodaysDate() }}</p>
+                  <p>{{ getSum() }}</p>
+                  <p>{{ getProgressMessage() }}</p>
+                <table class="table table-hover table-dark">
+                  <thead>
+                    <tr>
+                      <th scope="col" >Amount</th>
+                      <th scope="col">Submitted</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let entry of getTodaysEntries()">
+                      <td> {{ entry.amount }} {{ goal.unit }} </td>
+                      <td> {{ entry.timestamp | date :  'hh:mm aa' }} </td>
+                    </tr>
+                  </tbody>
+                </table>
+                  <!-- {{ getTodaysEntries() }} -->
+                    <button class="btn btn-info" [routerLink]="['/goal-detail']">Make a new entry towards goal</button>
+                </div>   
+            </div>    
+        </div> 
+    </div>
+</div>
