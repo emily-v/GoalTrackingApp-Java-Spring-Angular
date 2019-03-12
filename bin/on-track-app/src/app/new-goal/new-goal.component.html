@@ -1,0 +1,47 @@
+<div class="container" style="text-align:center">
+  <br>
+    <h4>New Goal...</h4><img width="300" src='..\assets\img\logo.jpg'>
+  <br>
+  <br>
+    <div class="text-white">
+        <div class="row mt-auto mt-md-auto">
+            <div class="col-md-auto col-lg-auto col-xl-5 mx-auto">
+                <app-header></app-header>
+                <div class="card bg-dark img text-white">
+                    <form #newGoalForm="ngForm" (ngSubmit)="saveNewGoal()">
+                        <div class="form-group">
+                            <label for="title">Goal Name</label>
+                            <input type="text" class="form-control" placeholder="Enter Goal Name" #name="ngModel" [(ngModel)]="goal.title" name="title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select required class="form-control" #name="ngModel" [(ngModel)]="goal.category" name="category" required>
+                                <option value="Fitness">Fitness</option>
+                                <option value="Nutrition">Nutrition</option>
+                                <option value="Mindful">Mindful</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="target">Target (per day)</label>
+                                <input type="text" class="form-control" #name="ngModel" [(ngModel)]="goal.target" name="target" placeholder="Enter Target" required>
+                            </div>   
+                        <div class="form-group">
+                            <label for="unit">Unit</label>
+                            <select #name="ngModel" [(ngModel)]="goal.unit" name="unit" required class="form-control" required>
+                                <option value="minutes">minutes</option>
+                                <option value="hours">hours</option>
+                                <option value="servings">servings</option>
+                                <option value="oz">oz</option>
+                                <option value="miles">miles</option>
+                                <option value="reps">reps</option>
+                            </select>
+                        </div>
+                    <button type="submit" class="btn btn-info">Create new goal</button>
+                    <!-- <h4><a (click)="saveNewGoal()" [routerLink]="['/user-profile']" class="badge badge-pill badge-info" rel="noopener">Create New Goal</a></h4>       -->
+                </form>
+            
+            </div>
+        </div>
+    </div>
+</div>

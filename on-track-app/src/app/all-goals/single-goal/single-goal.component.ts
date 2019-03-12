@@ -20,6 +20,7 @@ export class SingleGoalComponent implements OnInit {
   todaysEntries: Array<Entry> = [];
   newEntry: Entry =  new Entry();
   sum: number;
+  // isLoading: boolean = true;
 
   constructor(private goalService: GoalServiceService, private entryService: EntryServiceService, private route: ActivatedRoute) { }
 
@@ -33,7 +34,17 @@ export class SingleGoalComponent implements OnInit {
         (entries) => this.entries = entries,
         (err) => console.log(err)
       );
+
+    // this.isLoading = false;
+
+    // this.sum = this.getSum();
   }
+
+  // ngAfterViewInit() {
+  //   setTimeout(() => {
+  //     this.sum = this.getSum();
+  //   });
+  // }
 
   getCurrGoal() {
     this.goalService.getGoalById(this.goalid).subscribe((goal: Goal) => {
@@ -68,12 +79,17 @@ export class SingleGoalComponent implements OnInit {
    return date;
   }
 
-  getSum(): string {
+  // getSum(): string {
+  getSum(): number {
     this.sum = 0;
+
     for (let i = 0; i < this.todaysEntries.length; i++) {
       this.sum += this.todaysEntries[i].amount;
     }
-    return "Today's Progress: " + this.sum + " " + this.goal.unit;
+
+    console.log("sum: " + this.sum);
+    return this.sum;
+    // return "Today's Progress: " + this.sum + " " + this.goal.unit;
   }
 
   getProgressMessage(): string {

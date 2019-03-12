@@ -1,0 +1,19 @@
+body#background {
+    background: url('src\assets\img\footprint-5342.jpg') no-repeat 50% 50% fixed;
+    background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    }
+
+    
+.img {
+    background: url("https://static1.squarespace.com/static/5a44a08e90bcce5858a55570/5a44adc3ec212d2c09353485/5a44b439e2c483652f25c3d6/1514883046179/me+like.jpg?format=1000w");
+    background-repeat: no-repeat fixed;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 35px;
+}
+
+
+/* You can add global styles to this file, and also import other style files */

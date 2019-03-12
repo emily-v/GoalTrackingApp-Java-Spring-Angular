@@ -1,0 +1,14 @@
+[
+    {
+          "id": 1,
+          "fname": "Kayma",
+          "lname": "Japser",
+          "email": "kaymajasper@email.com",
+          "pw": "pass1",
+          "goal": [
+            {"id": 1, "userId": 1, "title": "Workout", "category": "Physical", "target": 20, "unit": "minutes"},
+            {"id": 2, "userId": 1, "title": "Call Mom", "category": "Social", "target": 30, "unit": "minutes"}
+        ]
+
+    }
+]
